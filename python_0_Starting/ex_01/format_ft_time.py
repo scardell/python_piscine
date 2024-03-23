@@ -1,12 +1,7 @@
-import time
 import datetime
-import locale
 
-locale.setlocale(locale.LC_ALL, '')
-
-current_time = time.time()
-formated_current_time = \
-    locale.format_string("%.4f", current_time, grouping=True)
+current_time = datetime.datetime.now()
+formated_current_time = current_time.strftime("%B %d, %Y %H:%M:%S")
 
 current_date = datetime.date.today()
 
