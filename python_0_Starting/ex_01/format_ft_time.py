@@ -1,11 +1,11 @@
 import datetime
+import time
 
-current_time = datetime.datetime.now()
-formated_current_time = current_time.strftime("%B %d, %Y %H:%M:%S")
-
+current_time = time.time()
 current_date = datetime.date.today()
 
-print(f"seconds since January 1, 1970: {formated_current_time} or {current_time:.2e} in specific notation")
-print(f"{current_date}")
-print(f"{current_date.strftime('%B')} {current_date.day} {current_date.year}")
+formatted_seconds = f"{current_time:,.4f}"
+scientific_notation = f"{current_time:.2e}"
+
+print(f"seconds since January 1, 1970: {formatted_seconds} or {scientific_notation} in specific notation")
 print(f"{current_date.strftime('%b %d %Y')}")
