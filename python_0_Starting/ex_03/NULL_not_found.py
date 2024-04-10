@@ -15,7 +15,14 @@ def NULL_not_found(object: any) -> int:
 
     if type_name == "Type not Found":
         flag = 1
-
+    if object in type_names:
+        print(f"{type_names[object]}: {object} {type(object)}")
+    else:
+        print("Type not found")
+    if flag == 1:
+        return 1
+    return 0
+"""
     if object is None:
         print(f"Nothing: {object} {type(object)}")
     elif object == 0 and type(object) is int:
@@ -33,3 +40,4 @@ def NULL_not_found(object: any) -> int:
     if flag == 1:
         return 1
     return 0
+"""
