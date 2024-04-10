@@ -17,6 +17,8 @@ def NULL_not_found(object: any) -> int:
         flag = 1
     if object in type_names:
         print(f"{type_names[object]}: {object} {type(object)}")
+    elif math.isnan(object):
+        print(f"Cheese: {object} {type(object)}")
     else:
         print("Type not found")
     if flag == 1:
