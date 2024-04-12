@@ -21,18 +21,16 @@ def main():
 	try:
 		if len(sys.argv) < 2:
 			try:
-				s = input("What is the text to count?\n")
-				s += "\n"
+				text_to_analyze = input("What is the text to count?\n")
 			except EOFError:
 				pass
 		elif len(sys.argv) == 2:
-			s = sys.argv[1]
+			text_to_analyze = sys.argv[1]
 		elif len(sys.argv) > 2:
 			raise AssertionError("Too many arguments provided")
-		analyze_text(s)
+		analyze_text(text_to_analyze)
 	except AssertionError as error:
 		print(AssertionError.__name__ + ":", error)
-
 
 if __name__ == "__main__":
     main()
