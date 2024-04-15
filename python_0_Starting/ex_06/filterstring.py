@@ -3,6 +3,13 @@ import sys
 from ft_filter import ft_filter
 
 def main():
+    """
+Accepts only 2 arguments:
+1. string
+2. integer
+
+Print a list of words that are longer than the integer.
+"""
     try:
         if len(sys.arg) != 3:
             raise AssertionError("the argument are bad")
@@ -13,7 +20,7 @@ def main():
         if not isinstance(text, str) or not isinstance(n, int):
             raise AssertionError("the argument are bad")
         
-        filtered_words = list(ft_filter(lambda word: len(word) >n, text.split()))
+        filtered_words = list(ft_filter(lambda word: len(word) > n, text.split()))
 
         print(filtered_words)
 
