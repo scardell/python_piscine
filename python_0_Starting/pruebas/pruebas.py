@@ -1,0 +1,8 @@
+T = (2, 3, 4, 5, 6)
+print("Tupla inicial")
+print(T)
+L = list(T)
+L.append(int(input("Introduzca el nuevo elemento: ")))
+L = tuple(L) 
+print("Tupla final")
+print(T)

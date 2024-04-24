@@ -4,7 +4,9 @@ ft_set = {"Hello", "tutu!"}
 ft_dict = {"Hello": "titi!"}
 
 ft_list[1] = "World!"
-ft_tuple = ("Hello", "Spain!")
+ft_tuple = list(ft_tuple)
+ft_tuple[1] = "Spain"
+ft_tuple = tuple(ft_tuple)
 
 ft_set.remove("tutu!")
 ft_set.add("Urduliz!")
