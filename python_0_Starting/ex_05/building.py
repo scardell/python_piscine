@@ -7,7 +7,7 @@ def analyze_text(text):
 	lower_count = sum(1 for char in text if char.islower())
 	punctuation_marks = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 	punctuation_count = sum(1 for char in text if char in punctuation_marks)
-	space_count = sum(1 for char in text if char.isspace())
+	space_count = sum(c.isspace() for c in text)
 	digit_count = sum (1 for char in text if char.isdigit())
 
 	print(f"The text contains {total_chars} characters:")
@@ -22,8 +22,9 @@ def main():
 		if len(sys.argv) < 2:
 			try:
 				text_to_analyze = input("What is the text to count?\n")
+				text_to_analyze += '\n'
 			except EOFError:
-				pass
+				raise AssertionError("no argument")
 		elif len(sys.argv) == 2:
 			text_to_analyze = sys.argv[1]
 		elif len(sys.argv) > 2:

@@ -17,7 +17,7 @@ def encode_to_morse(text):
         if char in NESTED_MORSE:
             morse_text.append(NESTED_MORSE[char])
         else:
-            raise AssertionError("Unsupported character: {}".format(char))
+            raise AssertionError("the arguments are bad")
     return ' '.join(morse_text)
 
 def main():
@@ -28,7 +28,7 @@ def main():
         morse_result = encode_to_morse(input_text)
         print(morse_result)
     except AssertionError as error:
-        print(error)
+        print(AssertionError.__name__+ ":", error)
 
 if __name__ == "__main__":
     main()
